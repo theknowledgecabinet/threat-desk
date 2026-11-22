@@ -1,0 +1,20 @@
+{
+ "name": "Threat Desk",
+ "short_name": "Threat Desk",
+ "start_url": "/threat-desk/",
+ "display": "standalone",
+ "background_color": "#0b1220",
+ "theme_color": "#0b1220",
+ "icons": [
+  {
+   "src": "/threat-desk/assets/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/threat-desk/assets/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cisco warns of eMudhra CA compromise affecting multiple products · Threat Desk</title>
+<meta name="description" content="Cisco has issued an emergency advisory after a critical compromise of eMudhra certificate authorities rendered eight intermediate certificates vulnerable to brute-force key recovery.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Cisco warns of eMudhra CA compromise affecting multiple products">
+<meta property="og:description" content="Cisco has issued an emergency advisory after a critical compromise of eMudhra certificate authorities rendered eight intermediate certificates vulnerable to brute-force key recovery.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/22/cisco-warns-of-emudhra-ca-compromise-affecting-multiple-products/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/2/large.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#2563eb" href="/threat-desk/section/advisories/">Advisories</a>
+<time datetime="2026-11-22T17:29:11+00:00">2026-11-22 17:29 UTC</time><span class="sev sev-critical">CRITICAL</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>Cisco warns of eMudhra CA compromise affecting multiple products</h1>
+<p class="standfirst">Cisco has issued an emergency advisory after a critical compromise of eMudhra certificate authorities rendered eight intermediate certificates vulnerable to brute-force key recovery.</p>
+
+<figure class="hero"><img src="/threat-desk/assets/media/2/large.webp" srcset="/threat-desk/assets/media/2/card.webp 480w, /threat-desk/assets/media/2/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Corporate office with certificate warnings and security alerts" decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>Between 17 and 20 October 2026, a critical security compromise involving Certificate Authorities managed by eMudhra was uncovered. A security researcher demonstrated that the private keys for eight eMudhra intermediate certificates were fundamentally broken due to an error in their Key Generation Ceremony in April 2025, allowing anyone to brute-force acquire these private keys within seconds.</p><p>Cisco has investigated its product line and identified numerous impacted devices, including IOS XE, Secure Firewall, and Identity Services Engine. For products where software fixes are available, Cisco has provided target release dates ranging from November 2026 to March 2027. Some cloud-based products, such as Duo Cloud and Meraki Dashboard, have been remediated without requiring customer action.</p><p>For products with immediate remediation steps, Cisco advises administrators to apply specific distrust guides or update trusted root lists. For example, Secure Email and Web Manager users should update to Trusted Root 2.8, while IOS XE users should follow the Cisco IOS XE and GuestShell CA Trust eMudhra Distrust Guide.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">IOS Software, IOS XE Software, Secure Firewall Adaptive Security Appliance, Packaged Contact Center Enterprise, Real Time Monitoring Tool, Secure Email and Web Manager, Secure Email Gateway, Secure Firepower Management Center, Unified Contact Center Enterprise, Unified Customer Voice Portal, Adaptive Security Device Manager, Application Policy Infrastructure Controller, ASR 5000 Series Software, Catalyst Center, Collaboration Endpoints, Crosswork Data Gateway, Cyber Vision, Duo Access Gateway, Duo Agentic Authorization Connector, Duo Network Gateway, Enterprise Chat and Email, Evolved Programmable Network Manager, Identity Services Engine, ISE Passive Identity Connector, Intersight Virtual Appliance, IOS XR Software, IP Phone 8800 Series, IP Phone 6800/7800/8800 Series, MDS 9000 Series, Meraki Dashboard, Meraki MV Smart Camera, Mesh Policy Engine, Network Functions Virtualization Orchestrator, Network Services Orchestrator, Nexus 3000 Series, Nexus 9000 Series, Optical Site Manager, Policy Suite, Prime Network Registrar, Provider Mobility, Secure Access, Secure Malware Analytics, Security Manager, Secure Network Analytics, Secure Workload, Smart Licensing Utility, Smart Software Manager, Smart PHY, Spaces Connector, Telemetry Broker, ThousandEyes Enterprise Agent</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Review the Cisco advisory to identify if your specific product version is impacted.</li><li>Apply the provided software fixes or upgrade to the target release versions listed in the advisory.</li><li>For products with immediate workarounds, apply the eMudhra distrust guides or update trusted root lists as specified.</li><li>Monitor for cloud-based remediations for products like Duo and Meraki where no customer action is required.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-emudhra-info-ScS22A1r?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Cisco%20Informational%20for%20Emergency%20Distrust%20of%20eMudhra%20Root%20and%20Intermediate%20Certificate%20Authorities%26vs_k=1" rel="noopener">Cisco security advisories</a></li></ul>
+<p class="checked">Checked against these sources by gpt-oss-20b before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

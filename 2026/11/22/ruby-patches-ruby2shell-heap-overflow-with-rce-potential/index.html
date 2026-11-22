@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruby patches &#x27;Ruby2Shell&#x27; heap overflow with RCE potential · Threat Desk</title>
+<meta name="description" content="Ruby has released updates for seven vulnerabilities, including a heap-based buffer overflow in string case conversion that allows unauthenticated remote code execution in specific single-byte encodings.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Ruby patches &#x27;Ruby2Shell&#x27; heap overflow with RCE potential">
+<meta property="og:description" content="Ruby has released updates for seven vulnerabilities, including a heap-based buffer overflow in string case conversion that allows unauthenticated remote code execution in specific single-byte encodings.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/22/ruby-patches-ruby2shell-heap-overflow-with-rce-potential/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/21/large.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-22T17:45:40+00:00">2026-11-22 17:45 UTC</time><span class="sev sev-high">HIGH</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>Ruby patches &#x27;Ruby2Shell&#x27; heap overflow with RCE potential</h1>
+<p class="standfirst">Ruby has released updates for seven vulnerabilities, including a heap-based buffer overflow in string case conversion that allows unauthenticated remote code execution in specific single-byte encodings.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-132825" rel="noopener">CVE-2026-132825</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/21/large.webp" srcset="/threat-desk/assets/media/21/card.webp 480w, /threat-desk/assets/media/21/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fact card: CVE-2026-132825" decoding="async"><figcaption>Fact card drawn from the NVD and CISA records</figcaption></figure>
+<div class="body"><p>Ruby versions 4.0.10, 3.4.13, and 3.3.14 resolve seven flaws, primarily in the regular expression engine and string case conversion. The most severe is CVE-2026-132825, a heap-based buffer overflow with a CVSS score of 7.4. Dubbed &#x27;Ruby2Shell&#x27;, this flaw occurs when converting characters in single-byte encodings such as ISO-8859-1 or Windows-1252, where Ruby may write one byte past the output buffer. For example, converting the German character ß to uppercase produces &#x27;SS&#x27;, but the code checks for only one byte of space, potentially corrupting adjacent heap memory.</p><p>Veria Labs reports that unauthenticated attackers could trigger this defect from Rails, classic-style Sinatra, and potentially other frameworks. WatchTowr notes that any Ruby application changing the case of external text in a single-byte encoding is affected. While proof-of-concept code exists for five of the vulnerabilities, WatchTowr principal threat intelligence specialist Yordan Ganchev stated that successful exploitation in production is likely challenging due to memory layout constraints, the need for specific non-glibc memory allocators, and Address Space Layout Randomization (ASLR). Malformed requests are more likely to result in denial-of-service than successful code execution.</p><p>According to Veria Labs, GitHub Enterprise Server is affected, while Chatwoot, GitLab, Mastodon, OpenProject, and the Discourse base image have already patched the bug. Veria Labs plans to release a public proof-of-concept after major vendors have rolled out patches. The other four vulnerabilities with RCE proof-of-concept code include a double free, two integer overflows, and a heap-based buffer overflow, though their CVE identifiers have not yet been assigned.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Ruby before 3.3.14, 3.4.13, and 4.0.10</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Upgrade Ruby to version 4.0.10, 3.4.13, or 3.3.14 immediately.</li><li>Audit applications for string case-conversion operations using single-byte encodings like ISO-8859-1 or Windows-1252.</li><li>Monitor for denial-of-service activity resulting from malformed requests targeting the regular expression engine or case conversion logic.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/" rel="noopener">SecurityWeek</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-132825" rel="noopener">Official record for CVE-2026-132825 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by gpt-oss-20b before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

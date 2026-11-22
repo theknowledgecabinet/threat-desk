@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CISA warns of flaws in Elecbrakes trailer controllers · Threat Desk</title>
+<meta name="description" content="Three vulnerabilities in Elecbrakes EB2, VM1, and ELBC2000 devices could allow attackers to manipulate trailer brakes or firmware via Bluetooth.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="CISA warns of flaws in Elecbrakes trailer controllers">
+<meta property="og:description" content="Three vulnerabilities in Elecbrakes EB2, VM1, and ELBC2000 devices could allow attackers to manipulate trailer brakes or firmware via Bluetooth.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/22/cisa-warns-of-flaws-in-elecbrakes-trailer-controllers/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/3/large.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-22T17:31:11+00:00">2026-11-22 17:31 UTC</time><span class="sev sev-high">HIGH</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>CISA warns of flaws in Elecbrakes trailer controllers</h1>
+<p class="standfirst">Three vulnerabilities in Elecbrakes EB2, VM1, and ELBC2000 devices could allow attackers to manipulate trailer brakes or firmware via Bluetooth.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-124281" rel="noopener">CVE-2026-124281</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-125273" rel="noopener">CVE-2026-125273</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-96805" rel="noopener">CVE-2026-96805</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/3/large.webp" srcset="/threat-desk/assets/media/3/card.webp 480w, /threat-desk/assets/media/3/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fact card: CVE-2026-124281, CVE-2026-125273, CVE-2026-96805" decoding="async"><figcaption>Fact card drawn from the NVD and CISA records</figcaption></figure>
+<div class="body"><p>The US Cybersecurity and Infrastructure Security Agency (CISA) has issued an advisory for three vulnerabilities affecting Elecbrakes electronic trailer brake controllers. The flaws, identified as CVE-2026-124281, CVE-2026-125273, and CVE-2026-96805, expose the devices to unauthorised firmware modification, command replay attacks, and unauthenticated command injection.</p><p>According to the advisory, successful exploitation could allow an attacker to gain control of the trailer brakes, modify firmware, disable brake lights, or alter brake conditions. The most severe issue, CVE-2026-96805, permits an in-range Bluetooth Low Energy (BLE) device to write to the control interface without authentication or pairing, carrying a CVSS 4.0 base score of 8.5 (high). CVE-2026-125273, which lacks replay or command-integrity protection, also scores 8.5 (high), while the unprotected firmware channel (CVE-2026-124281) is rated 5.3 (medium).</p><p>CISA lists these vulnerabilities as not currently known to be exploited. The affected equipment is deployed in transportation systems across Australia and New Zealand. While fixes are available for the EB2 and VM1 models, no remediation is currently available for the ELBC2000, which is no longer sold.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Elecbrakes EB2 &lt;=3.0.4.2.0; Elecbrakes VM1 &lt;1.3.4.2.1; Elecbrakes ELBC2000 vers:all/*</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Update Elecbrakes EB2 firmware to version 3.0.4.4.3 via the Elecbrakes app.</li><li>Update Elecbrakes VM1 firmware to version 1.3.4.2.1 via the Elecbrakes app.</li><li>Monitor vendor communications for a fix for the ELBC2000, as no patch is currently available.</li><li>Restrict physical and wireless access to the controllers to mitigate unauthenticated BLE attacks.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-02" rel="noopener">CISA advisories</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-124281" rel="noopener">Official record for CVE-2026-124281 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125273" rel="noopener">Official record for CVE-2026-125273 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-96805" rel="noopener">Official record for CVE-2026-96805 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by gpt-oss-20b before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

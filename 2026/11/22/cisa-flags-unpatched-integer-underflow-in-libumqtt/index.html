@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CISA flags unpatched integer underflow in libumqtt · Threat Desk</title>
+<meta name="description" content="CISA has issued an advisory for an integer underflow vulnerability in libumqtt that allows remote denial of service, memory corruption, or information disclosure, with no vendor fix available.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="CISA flags unpatched integer underflow in libumqtt">
+<meta property="og:description" content="CISA has issued an advisory for an integer underflow vulnerability in libumqtt that allows remote denial of service, memory corruption, or information disclosure, with no vendor fix available.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/22/cisa-flags-unpatched-integer-underflow-in-libumqtt/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/4/large.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-22T17:31:13+00:00">2026-11-22 17:31 UTC</time><span class="sev sev-high">HIGH</span><span class="chip chip-bad">NO PATCH YET</span></div>
+<h1>CISA flags unpatched integer underflow in libumqtt</h1>
+<p class="standfirst">CISA has issued an advisory for an integer underflow vulnerability in libumqtt that allows remote denial of service, memory corruption, or information disclosure, with no vendor fix available.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-125132" rel="noopener">CVE-2026-125132</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/4/large.webp" srcset="/threat-desk/assets/media/4/card.webp 480w, /threat-desk/assets/media/4/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fact card: CVE-2026-125132" decoding="async"><figcaption>Fact card drawn from the NVD and CISA records</figcaption></figure>
+<div class="body"><p>CISA published ICS Advisory ICSA-26-323-03, identifying an integer underflow (CWE-191) in libumqtt. The agency states that successful exploitation could allow a remote attacker to cause a denial of service, memory corruption, or information disclosure. The vulnerability affects libumqtt versions 1.1.1 and earlier.</p><p>The National Vulnerability Database lists the CVSS 4.0 base score as 8.8 (High), while CISA’s CVSS 3.1 score is 8.6 (High). CISA notes that the repository owners did not respond to coordination requests, meaning no official remediation is currently available. The vulnerability was reported to CISA by Joseph Devasia.</p><p>CISA recommends minimising network exposure for control system devices and ensuring they are not accessible from the internet. Organisations should locate control system networks behind firewalls, isolated from business networks, and use secure methods such as VPNs when remote access is required.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">libumqtt &lt;=1.1.1</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Minimise network exposure for control system devices and ensure they are not accessible from the internet.</li><li>Locate control system networks and remote devices behind firewalls, isolating them from business networks.</li><li>Use secure methods such as Virtual Private Networks (VPNs) when remote access is required, keeping them updated.</li><li>Contact libumqtt maintainers directly for support as no official patch is available.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-03" rel="noopener">CISA advisories</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-125132" rel="noopener">Official record for CVE-2026-125132 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by gpt-oss-20b before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>
