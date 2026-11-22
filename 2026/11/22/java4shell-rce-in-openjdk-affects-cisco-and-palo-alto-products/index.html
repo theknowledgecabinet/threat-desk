@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Java4Shell RCE in OpenJDK affects Cisco and Palo Alto products · Threat Desk</title>
+<meta name="description" content="Oracle has released fixes for a critical buffer overflow in the Base64 decoder that allows remote code execution on x86-64 systems with AVX-512 support.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Java4Shell RCE in OpenJDK affects Cisco and Palo Alto products">
+<meta property="og:description" content="Oracle has released fixes for a critical buffer overflow in the Base64 decoder that allows remote code execution on x86-64 systems with AVX-512 support.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/22/java4shell-rce-in-openjdk-affects-cisco-and-palo-alto-products/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/51/large.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-22T21:34:45+00:00">2026-11-22 21:34 UTC</time><span class="sev sev-high">HIGH</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>Java4Shell RCE in OpenJDK affects Cisco and Palo Alto products</h1>
+<p class="standfirst">Oracle has released fixes for a critical buffer overflow in the Base64 decoder that allows remote code execution on x86-64 systems with AVX-512 support.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-114938" rel="noopener">CVE-2026-114938</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/51/large.webp" srcset="/threat-desk/assets/media/51/card.webp 480w, /threat-desk/assets/media/51/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fact card: CVE-2026-114938" decoding="async"><figcaption>Fact card drawn from the NVD and CISA records</figcaption></figure>
+<div class="body"><p>Oracle announced on 17 November 2026 that it has released fixes for CVE-2026-114938, a critical vulnerability in the HotSpot JVM&#x27;s optimised Base64 decoder. The flaw, dubbed &#x27;Java4Shell&#x27;, is a buffer overflow that occurs when processing Base64 encoded content on x86-64 platforms with AVX-512 VBMI support. An unauthenticated remote attacker can exploit this to achieve remote code execution by supplying specially crafted Base64 input to affected applications.</p><p>Cisco published an advisory on 18 November 2026 stating that several of its products are affected, including Secure Network Analytics, Cisco IQ Virtual Appliance, and various Unified Communications products. Cisco confirmed that proof-of-concept exploit code is available but is not aware of any malicious use. The company noted that there are no workarounds and that fixed releases are pending for most affected products, with some specific versions like Secure Network Analytics 7.6.1 planned for patching.</p><p>Palo Alto Networks assessed the vulnerability as Critical with a CVSS 4.0 score of 9.2. The vendor identified that its Idira products, including Privilege Threat Analytics and Remote Access Connector, are affected. Fixes are available for these products, such as upgrading Privilege Threat Analytics to version 15.2.3 or later. Palo Alto Networks stated that PAN-OS based products are not impacted and that SaaS products are being managed directly by the vendor.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Oracle Java SE (8u511b33-perf, 17.0.21.0.3, 21.0.13.0.3, 25.0.5.0.3, 27.0.1.0.3), Oracle GraalVM for JDK (17.0.21.0.3, 21.0.13.0.3), Oracle GraalVM Enterprise Edition (21.3.20.0.3), Cisco Secure Network Analytics, Cisco IQ Virtual Appliance, Palo Alto Networks Idira Privilege Threat Analytics, Idira Remote Access Connector, Idira Secure Access with an HTML5 Gateway (On-Prem)</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Apply the Oracle Critical Security Patch Update for November 2026 to update Java runtimes.</li><li>Upgrade affected Cisco products to the fixed releases listed in the Cisco Security Advisory.</li><li>Upgrade Palo Alto Networks Idira products to the specified fixed versions, such as Privilege Threat Analytics 15.2.3.</li><li>Monitor vendor advisories for updates on fixed release dates for products where patches are still TBD.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nov2026-java-rce-eCa6ss9z?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Vulnerability%20in%20Oracle%20OpenJDK%20(Java4Shell)%20Affecting%20Cisco%20Products:%20November%202026%26vs_k=1" rel="noopener">Cisco security advisories</a></li><li><a href="https://security.paloaltonetworks.com/CVE-2026-114938" rel="noopener">Palo Alto Networks security advisories</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-114938" rel="noopener">Official record for CVE-2026-114938 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by gpt-oss-20b before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>
