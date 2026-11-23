@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Critical NGINX flaws enable unauthenticated remote code execution · Threat Desk</title>
+<meta name="description" content="NGINX has released fixes for five critical vulnerabilities, including use-after-free and integer underflow bugs, that allow unauthenticated attackers to execute arbitrary code.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Critical NGINX flaws enable unauthenticated remote code execution">
+<meta property="og:description" content="NGINX has released fixes for five critical vulnerabilities, including use-after-free and integer underflow bugs, that allow unauthenticated attackers to execute arbitrary code.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/23/critical-nginx-flaws-enable-unauthenticated-remote-code-execution/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/59/large.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-23T08:41:37+00:00">2026-11-23 08:41 UTC</time><span class="sev sev-critical">CRITICAL</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>Critical NGINX flaws enable unauthenticated remote code execution</h1>
+<p class="standfirst">NGINX has released fixes for five critical vulnerabilities, including use-after-free and integer underflow bugs, that allow unauthenticated attackers to execute arbitrary code.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-113425" rel="noopener">CVE-2026-113425</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-121810" rel="noopener">CVE-2026-121810</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123007" rel="noopener">CVE-2026-123007</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123633" rel="noopener">CVE-2026-123633</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123634" rel="noopener">CVE-2026-123634</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/59/large.webp" srcset="/threat-desk/assets/media/59/card.webp 480w, /threat-desk/assets/media/59/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fact card: CVE-2026-113425, CVE-2026-118899, CVE-2026-120967" decoding="async"><figcaption>Fact card drawn from the NVD and CISA records</figcaption></figure>
+<div class="body"><p>NGINX announced on 18 November 2026 that it has fixed multiple critical vulnerabilities affecting releases 1.9.5 through 1.31.8. The flaws, identified as CVE-2026-113425, CVE-2026-121810, CVE-2026-123007, CVE-2026-123633, and CVE-2026-123634, permit remote unauthenticated attackers to crash worker processes or execute arbitrary code. Cisco’s PSIRT confirmed that proof-of-concept exploit code is available, though it is not aware of any malicious use to date.</p><p>The vulnerabilities include a use-after-free in the mail proxy module and HTTP/2 proxy handling, as well as an integer underflow in HTTP/2 flow control. According to Palo Alto Networks, these issues specifically impact configurations where HTTP/2 is enabled. The vendor noted that the flaws allow attackers to trigger heap-based buffer overflows or prematurely free memory for active connections, leading to remote code execution.</p><p>Major vendors including Fortinet, Cisco, and Palo Alto Networks have published advisories detailing the impact on their respective product lines. While Fortinet is still investigating the impact on its portfolio, Cisco has identified several affected products, including Identity Services Engine and NX-OS Software, with fixed releases scheduled for December 2026. Palo Alto Networks has confirmed that PAN-OS versions prior to specific hotfixes are vulnerable, with patches available for immediate deployment.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">NGINX OSS versions 1.9.5 - 1.31.8; PAN-OS 12.2 &lt; 12.2.4-h3, 12.1 &gt;= 12.1.5 &lt; 12.1.7-h15, 11.2 &gt;= 11.2.8 &lt; 11.2.10-h19; Cisco ISE 3.5, NX-OS Software, UCS Director, and various Cisco cloud and collaboration products.</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Upgrade NGINX to version 1.31.9 (mainline) or 1.30.7 (stable).</li><li>For Palo Alto Networks, upgrade PAN-OS to 12.2.4-h3, 12.1.7-h15, or 11.2.10-h19 or later.</li><li>Disable the HTTP/2 option on PAN-OS and Panorama if immediate patching is not possible.</li><li>Monitor vendor advisories for specific fixed releases of Cisco and Fortinet products.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://fortiguard.fortinet.com/psirt/FG-IR-26-279" rel="noopener">Fortinet PSIRT</a></li><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s?vs_f=Cisco%20Security%20Advisory%26vs_cat=Security%20Intelligence%26vs_type=RSS%26vs_p=Vulnerabilities%20in%20nginx%20Affecting%20Cisco%20Products:%20November%202026%26vs_k=1" rel="noopener">Cisco security advisories</a></li><li><a href="https://security.paloaltonetworks.com/CVE-2026-123633" rel="noopener">Palo Alto Networks security advisories</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-113425" rel="noopener">Official record for CVE-2026-113425 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-118899" rel="noopener">Official record for CVE-2026-118899 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120967" rel="noopener">Official record for CVE-2026-120967 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-120993" rel="noopener">Official record for CVE-2026-120993 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by gpt-oss-20b before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>
