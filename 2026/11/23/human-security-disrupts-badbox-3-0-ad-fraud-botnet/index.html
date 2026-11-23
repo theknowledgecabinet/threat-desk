@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human Security disrupts BadBox 3.0 ad fraud botnet · Threat Desk</title>
+<meta name="description" content="The third iteration of the BadBox operation generated 40 billion daily bid requests by spoofing CTV apps on low-cost Android devices.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Human Security disrupts BadBox 3.0 ad fraud botnet">
+<meta property="og:description" content="The third iteration of the BadBox operation generated 40 billion daily bid requests by spoofing CTV apps on low-cost Android devices.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/23/human-security-disrupts-badbox-3-0-ad-fraud-botnet/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/103/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#d97706" href="/threat-desk/section/threats/">Threat activity</a>
+<time datetime="2026-11-23T22:08:11+00:00">2026-11-23 22:08 UTC</time><span class="sev sev-high">HIGH</span><span class="chip chip-bad">EXPLOITED</span></div>
+<h1>Human Security disrupts BadBox 3.0 ad fraud botnet</h1>
+<p class="standfirst">The third iteration of the BadBox operation generated 40 billion daily bid requests by spoofing CTV apps on low-cost Android devices.</p>
+
+<figure class="hero"><img src="/threat-desk/assets/media/103/large.webp" srcset="/threat-desk/assets/media/103/card.webp 480w, /threat-desk/assets/media/103/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Android devices generating ad fraud on a city street" decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>Bot and fraud protection firm Human Security says it has disrupted BadBox 3.0, the largest ad fraud botnet by bid volume. At its height, the operation accounted for roughly 40 billion bid requests a day and more than 4% of all CTV traffic observed by the Human Defense Platform, a volume three times that of the VastFlux scheme.</p><p>The botnet targets low-cost, uncertified Android Open Source Project devices infected with backdoors. These devices run fraud modules that render hidden video ads in a background window, mimicking legitimate video ad SDKs to make bid requests appear to come from known applications. The threat actors also use server-side ad insertion to monetise this application spoofing.</p><p>Human Security’s Satori Threat Intelligence and Research Team linked the operation to Chinese electronics manufacturer TXCZ, noting that modules check for TXCZ build properties and a TXCZ domain serves payload downloads. The firm also identified an actively maintained catalogue of fraud modules on public repositories, including residential proxy modules that enrolled devices into eleven networks, including PXYEDGE.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Low-cost, uncertified Android Open Source Project devices</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Monitor for hidden video ad rendering or unusual CTV traffic patterns.</li><li>Block known command-and-control domains associated with BadBox 3.0.</li><li>Audit Android devices for uncertified hardware or TXCZ build properties.</li><li>Filter bid requests for anomalies in residential IP addresses and app spoofing.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://www.securityweek.com/badbox-3-0-ad-fraud-operation-generating-40-billion-daily-bid-requests-disrupted/" rel="noopener">SecurityWeek</a></li></ul>
+<p class="checked">Checked against these sources by gpt-oss-20b before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

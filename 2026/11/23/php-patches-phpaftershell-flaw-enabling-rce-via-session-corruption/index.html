@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PHP patches phpAfterShell flaw enabling RCE via session corruption · Threat Desk</title>
+<meta name="description" content="PHP has released patches for CVE-2026-126714, a critical vulnerability that allows remote code execution by exploiting interrupted session writes to trigger object deserialization.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="PHP patches phpAfterShell flaw enabling RCE via session corruption">
+<meta property="og:description" content="PHP has released patches for CVE-2026-126714, a critical vulnerability that allows remote code execution by exploiting interrupted session writes to trigger object deserialization.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/23/php-patches-phpaftershell-flaw-enabling-rce-via-session-corruption/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/90/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-23T22:02:21+00:00">2026-11-23 22:02 UTC</time><span class="sev sev-critical">CRITICAL</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>PHP patches phpAfterShell flaw enabling RCE via session corruption</h1>
+<p class="standfirst">PHP has released patches for CVE-2026-126714, a critical vulnerability that allows remote code execution by exploiting interrupted session writes to trigger object deserialization.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-126714" rel="noopener">CVE-2026-126714</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/90/large.webp" srcset="/threat-desk/assets/media/90/card.webp 480w, /threat-desk/assets/media/90/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Corrupted session file in a school locker during lunch" decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>Security firm Depthfirst identified a critical-severity vulnerability in PHP, tracked as CVE-2026-126714 with a CVSS score of 9.2. The flaw, dubbed phpAfterShell, exists because PHP overwrites session files without emptying them first. If a session write operation is interrupted mid-process, the file retains mixed content: fresh session data followed by remnants of the old session. This corruption can cause ordinary strings to be interpreted as serialized object data, leading to remote code execution when the session is subsequently loaded.</p><p>According to Depthfirst, attackers can trigger this by controlling data written to a session file and interrupting the write operation, for example through multipart upload progress updates. The issue is related to the earlier PHP2Shell flaws, where PHP’s upload-progress callback could open and decode a file-backed session before the target script began. Although PHP added restrictions on object creation in memory, it did not modify the underlying file update behaviour, leaving the attack path viable.</p><p>PHP resolved the issue on 19 November alongside six other critical issues. The vendor notes that successful exploitation requires default session storage to be active, an exploitation route such as upload progress tracking, the PHP process to stop mid-write, a request to call session_start() on the corrupted file, and a deserialization-to-code-execution path. There are no current reports of in-the-wild exploitation of phpAfterShell.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">PHP versions 8.6.0, 8.5.13, 8.4.28, 8.3.37, and 8.2.36</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Update PHP to version 8.6.0, 8.5.13, 8.4.28, 8.3.37, or 8.2.36 or later.</li><li>Review session handling configurations to ensure default session storage is not active if not required.</li><li>Monitor for unusual session file corruption or deserialization errors in application logs.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://www.securityweek.com/phpaftershell-vulnerability-revives-php2shells-attack-path/" rel="noopener">SecurityWeek</a></li></ul>
+<p class="checked">Checked against these sources by gpt-oss-20b before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

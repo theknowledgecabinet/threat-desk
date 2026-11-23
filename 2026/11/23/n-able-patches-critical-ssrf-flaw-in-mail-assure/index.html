@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N-able patches critical SSRF flaw in Mail Assure · Threat Desk</title>
+<meta name="description" content="N-able has released a patch for a critical server-side request forgery vulnerability discovered during its investigation into a cyberattack on its Mail Assure and SpamExperts services.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="N-able patches critical SSRF flaw in Mail Assure">
+<meta property="og:description" content="N-able has released a patch for a critical server-side request forgery vulnerability discovered during its investigation into a cyberattack on its Mail Assure and SpamExperts services.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/23/n-able-patches-critical-ssrf-flaw-in-mail-assure/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/89/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-23T22:02:03+00:00">2026-11-23 22:02 UTC</time><span class="sev sev-critical">CRITICAL</span><span class="chip chip-bad">EXPLOITED</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>N-able patches critical SSRF flaw in Mail Assure</h1>
+<p class="standfirst">N-able has released a patch for a critical server-side request forgery vulnerability discovered during its investigation into a cyberattack on its Mail Assure and SpamExperts services.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-134624" rel="noopener">CVE-2026-134624</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/89/large.webp" srcset="/threat-desk/assets/media/89/card.webp 480w, /threat-desk/assets/media/89/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="A leaking valve showing a security flaw in an aging system." decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>N-able disclosed that it has remediated a critical server-side request forgery (SSRF) vulnerability, tracked as CVE-2026-134624, which was identified during its investigation into a cyberattack targeting its Mail Assure and SpamExperts Hosted Cloud services. The company confirmed that the attack involved a web server where attackers likely accessed stored credentials, leading to the temporary suspension of services including logging, mailbox synchronisation, and the management portal on 16 November.</p><p>The vulnerability, which carries a CVSS score of 9.3, exists because the affected service did not restrict the destination of the LDAP synchronisation connection check performed when a relay is configured. This flaw could allow an API user with sufficient privileges to force the vulnerable server to connect to arbitrary internal hosts and ports, identify reachable services, and send crafted data to internal systems.</p><p>N-able stated that it has contained the incident, changed credentials, and revoked API and OAuth tokens. Access to the Mail Assure and SpamExperts dashboard and APIs was restored on 21 November. The company reported that exploitation was confined to a single N-able-hosted server and that continued monitoring has found no further malicious activity. A formal root cause analysis is expected within two weeks.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Mail Assure/SpamExperts (patched in version 20261121.1943)</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Update Mail Assure and SpamExperts to version 20261121.1943 or later.</li><li>Review API and OAuth token usage for any unauthorised access.</li><li>Monitor for anomalous LDAP synchronisation connection attempts.</li><li>Wait for the formal root cause analysis for further details.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://www.securityweek.com/n-able-patches-critical-flaw-disclosed-after-mail-assure-cyberattack/" rel="noopener">SecurityWeek</a></li></ul>
+<p class="checked">Checked against these sources by gpt-oss-20b before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>
