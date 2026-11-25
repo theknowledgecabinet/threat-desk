@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://theknowledgecabinet.github.io/threat-desk/</loc><lastmod>2026-11-25T11:11:17+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/</loc><lastmod>2026-11-25T16:41:08+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/about/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/vulnerabilities/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/advisories/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/threats/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/incidents/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/policy/</loc></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/25/ghostscript-sandbox-escape-enables-rce-via-crafted-file-uploads/</loc><lastmod>2026-11-25T16:41:08+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/25/openrouter-removes-three-providers-after-prompt-theft/</loc><lastmod>2026-11-25T16:39:48+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/25/bulgaria-reveals-five-year-government-data-breach/</loc><lastmod>2026-11-25T16:39:26+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/25/dell-patches-critical-9-9-flaw-in-enterprise-sonic/</loc><lastmod>2026-11-25T16:39:25+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/25/bots-exploit-leaked-aws-keys-in-docker-images-within-eight-seconds/</loc><lastmod>2026-11-25T16:39:06+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/25/us-investigates-potential-iranian-link-in-fortigate-breaches-of-50/</loc><lastmod>2026-11-25T16:38:46+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/25/fake-net-job-assessments-used-to-spread-malware-via-nuget/</loc><lastmod>2026-11-25T16:37:37+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/25/cisa-adds-drupal-idunno-and-optimizely-flaws-to-kev-catalogue/</loc><lastmod>2026-11-25T16:37:36+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/25/fincen-takes-systems-offline-after-unauthorised-access/</loc><lastmod>2026-11-25T16:36:35+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/24/gnupg-releases-fix-for-critical-gpgme-memory-corruption-flaw/</loc><lastmod>2026-11-25T11:11:17+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/24/cert-in-warns-of-ai-assisted-attacks-causing-unauthorised-payments/</loc><lastmod>2026-11-25T11:10:58+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/24/critical-screenconnect-flaw-exploited-to-hijack-msp-technician-pcs/</loc><lastmod>2026-11-25T11:10:41+00:00</lastmod></url>
