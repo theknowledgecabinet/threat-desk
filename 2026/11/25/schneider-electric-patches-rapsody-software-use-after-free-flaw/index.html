@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schneider Electric patches Rapsody software use-after-free flaw · Threat Desk</title>
+<meta name="description" content="CISA has published an advisory for a use-after-free vulnerability in Schneider Electric EcoStruxure Power Build Rapsody software that allows local code execution via malicious files.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Schneider Electric patches Rapsody software use-after-free flaw">
+<meta property="og:description" content="CISA has published an advisory for a use-after-free vulnerability in Schneider Electric EcoStruxure Power Build Rapsody software that allows local code execution via malicious files.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/25/schneider-electric-patches-rapsody-software-use-after-free-flaw/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/142/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-25T08:49:22+00:00">2026-11-25 08:49 UTC</time><span class="sev sev-medium">MEDIUM</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>Schneider Electric patches Rapsody software use-after-free flaw</h1>
+<p class="standfirst">CISA has published an advisory for a use-after-free vulnerability in Schneider Electric EcoStruxure Power Build Rapsody software that allows local code execution via malicious files.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-119055" rel="noopener">CVE-2026-119055</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/142/large.webp" srcset="/threat-desk/assets/media/142/card.webp 480w, /threat-desk/assets/media/142/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fact card: CVE-2026-119055" decoding="async"><figcaption>Fact card drawn from the NVD and CISA records</figcaption></figure>
+<div class="body"><p>Schneider Electric has identified a use-after-free vulnerability (CVE-2026-119055) in its EcoStruxure Power Build Rapsody software. The flaw, classified as CWE-416, permits a local attacker to execute arbitrary code by tricking an end user into opening a specially crafted malicious SSD file.</p><p>The vulnerability affects multiple regional versions of the software, including French, Spanish, Portuguese, Belgian, international, and Dutch builds. According to the CISA advisory, failure to apply the remediations may risk memory corruption, heap-based buffer overflow, and/or stack-based buffer overflow.</p><p>The National Vulnerability Database lists the CVSS 4.0 base score as 4.6 (medium). CISA does not currently list this vulnerability as known exploited. Schneider Electric has released fixed versions for all affected regional builds.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">EcoStruxure Power Build Rapsody software versions: FR &lt;=2.9.1.0, ESP &lt;=2.8.5.0301, PT &lt;=2.8.7.0101, BEL(FR) &lt;=2.8.8.0201, BEL(EN) &lt;=2.8.3.0201, INT(EN) &lt;=2.8.4.0401, INT(FR) &lt;=2.8.6.0000, NL &lt;=2.8.2.0000</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Update EcoStruxure Power Build Rapsody software to the fixed versions specified by Schneider Electric (e.g., FR V2.9.12.0101, ESP V2.9.5.0000).</li><li>Restrict user permissions to prevent the execution of untrusted SSD files.</li><li>Monitor for unusual local activity on systems running the affected software versions.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-02" rel="noopener">CISA advisories</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119055" rel="noopener">Official record for CVE-2026-119055 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>
