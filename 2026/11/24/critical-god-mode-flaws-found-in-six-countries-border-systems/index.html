@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Critical &#x27;God Mode&#x27; flaws found in six countries&#x27; border systems · Threat Desk</title>
+<meta name="description" content="Independent researcher Eaton Zveare discovered critical API vulnerabilities in the online visa and immigration systems of Nigeria, Ethiopia, Fiji, Zambia, Sri Lanka, and Ghana, allowing unauthorised access to sensitive data and administrative controls.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Critical &#x27;God Mode&#x27; flaws found in six countries&#x27; border systems">
+<meta property="og:description" content="Independent researcher Eaton Zveare discovered critical API vulnerabilities in the online visa and immigration systems of Nigeria, Ethiopia, Fiji, Zambia, Sri Lanka, and Ghana, allowing unauthorised access to sensitive data and administrative controls.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/24/critical-god-mode-flaws-found-in-six-countries-border-systems/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/172/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-25T11:00:35+00:00">2026-11-25 11:00 UTC</time><span class="sev sev-critical">CRITICAL</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>Critical &#x27;God Mode&#x27; flaws found in six countries&#x27; border systems</h1>
+<p class="standfirst">Independent researcher Eaton Zveare discovered critical API vulnerabilities in the online visa and immigration systems of Nigeria, Ethiopia, Fiji, Zambia, Sri Lanka, and Ghana, allowing unauthorised access to sensitive data and administrative controls.</p>
+
+<figure class="hero"><img src="/threat-desk/assets/media/172/large.webp" srcset="/threat-desk/assets/media/172/card.webp 480w, /threat-desk/assets/media/172/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Airport terminal with glowing kiosk and distorted passport scanner" decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>Security researcher Eaton Zveare identified critical API vulnerabilities, including broken object-level authorisation (BOLA), broken function-level authorisation (BFLA), and missing authentication, in the online passport and border-control systems of six nations. The flaws, which he described as &#x27;God mode at the border,&#x27; allowed unauthorised access to millions of travellers&#x27; sensitive visa and passport data, potentially including biometric information such as fingerprints. In some cases, the vulnerabilities granted access to administrative functions that could be used to approve or deny entry into a country.</p><p>Zveare stated that the systems were built by third-party contractors with varying levels of expertise, which likely contributed to the security gaps. In Nigeria&#x27;s case, he noted that an over-reliance on AI to build the systems may have introduced flaws into the code. He discovered the initial vulnerability in Nigeria&#x27;s private back-end portal by searching Microsoft Bing for &#x27;admin panel&#x27; approximately a year ago, before expanding his investigation to five other countries using similar web technologies such as Angular and React.</p><p>The researcher developed exploits to demonstrate that attackers could view personally identifiable information (PII) and access administrative functions. Zveare warned that a worst-case scenario could involve an attacker identifying a high-level executive, accessing their travel itinerary and hotel information, and using those details to track their movements for potential kidnapping or assassination. He will disclose further details of the flaws during a session at Black Hat Europe on 10 December.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Online visa and immigration systems of Nigeria, Ethiopia, Fiji, Zambia, Sri Lanka, and Ghana</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Audit third-party contractors and their development processes for critical infrastructure projects.</li><li>Implement strict authentication and authorisation controls to prevent BOLA and BFLA vulnerabilities.</li><li>Ensure national CERTs have clear protocols for responding to disclosures regarding critical border systems.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://www.darkreading.com/vulnerabilities-threats/god-mode-flaws-wreak-border-control-havoc" rel="noopener">Dark Reading</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

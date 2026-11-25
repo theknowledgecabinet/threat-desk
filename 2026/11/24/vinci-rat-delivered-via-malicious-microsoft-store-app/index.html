@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vinci RAT delivered via malicious Microsoft Store app · Threat Desk</title>
+<meta name="description" content="Analysts identified a campaign using a legitimate Microsoft Store listing to install a backdoor that deploys Vinci RAT, allowing remote control of Windows systems.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Vinci RAT delivered via malicious Microsoft Store app">
+<meta property="og:description" content="Analysts identified a campaign using a legitimate Microsoft Store listing to install a backdoor that deploys Vinci RAT, allowing remote control of Windows systems.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/24/vinci-rat-delivered-via-malicious-microsoft-store-app/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/167/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#d97706" href="/threat-desk/section/threats/">Threat activity</a>
+<time datetime="2026-11-25T10:58:55+00:00">2026-11-25 10:58 UTC</time><span class="sev sev-high">HIGH</span><span class="chip chip-bad">EXPLOITED</span></div>
+<h1>Vinci RAT delivered via malicious Microsoft Store app</h1>
+<p class="standfirst">Analysts identified a campaign using a legitimate Microsoft Store listing to install a backdoor that deploys Vinci RAT, allowing remote control of Windows systems.</p>
+
+<figure class="hero"><img src="/threat-desk/assets/media/167/large.webp" srcset="/threat-desk/assets/media/167/card.webp 480w, /threat-desk/assets/media/167/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Genuine app icon masked as a threat, data packets flowing to a hidden backdoor" decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>eSentire’s Threat Response Unit documented an intrusion in early November 2026 where a user seeking a screenshot tool was redirected to a fake site serving a signed installer. This installer directed the user to &#x27;Setup Assistant&#x27;, a genuine Microsoft Store app published by ETPS Ltd, which acted as a backdoor. Unlike previous campaigns using fake storefronts, this attack leveraged a real store listing to establish trust.</p><p>Once installed, the app contacted a command-and-control server to monitor specific files and execute PowerShell or JavaScript commands. In the investigated case, this access launched a loader that retrieved Vinci RAT from a separate domain and created a Windows scheduled task running every 10 minutes to maintain persistence. The malware gathered system details and supported reverse shells, though not all capabilities were confirmed as used in the specific incident.</p><p>eSentire noted that Microsoft initially stated the app did not violate its terms after researchers reported it via the Store’s abuse form. The report does not confirm whether the listing was subsequently removed. The package metadata indicated a release date of 1 June 2026, suggesting the app may have been available for five months prior to the investigation.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Windows PCs; Microsoft Store app &#x27;Setup Assistant&#x27; (published by ETPS Ltd)</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Isolate devices exhibiting unexpected Store app installations, PowerShell activity, or recurring scheduled tasks.</li><li>Review endpoint, DNS, and proxy logs for connections to the reported IoCs.</li><li>Restrict Microsoft Store installations on managed devices using Intune, AppLocker, or Windows Defender Application Control.</li><li>Review unfamiliar apps before approving them on managed endpoints.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cybersecuritynews.com/vinci-rat-linked-to-microsoft-store/" rel="noopener">Cyber Security News</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Inception extortion gang linked to SSO vishing campaign · Threat Desk</title>
+<meta name="description" content="Okta and ReversingLabs link a new data extortion group to a voice phishing operation targeting single sign-on credentials, with Okta assessing the cluster very likely changed its brand affiliation from ShinyHunters.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="New Inception extortion gang linked to SSO vishing campaign">
+<meta property="og:description" content="Okta and ReversingLabs link a new data extortion group to a voice phishing operation targeting single sign-on credentials, with Okta assessing the cluster very likely changed its brand affiliation from ShinyHunters.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/24/new-inception-extortion-gang-linked-to-sso-vishing-campaign/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/161/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#d97706" href="/threat-desk/section/threats/">Threat activity</a>
+<time datetime="2026-11-25T10:54:46+00:00">2026-11-25 10:54 UTC</time><span class="sev sev-high">HIGH</span><span class="chip chip-bad">EXPLOITED</span></div>
+<h1>New Inception extortion gang linked to SSO vishing campaign</h1>
+<p class="standfirst">Okta and ReversingLabs link a new data extortion group to a voice phishing operation targeting single sign-on credentials, with Okta assessing the cluster very likely changed its brand affiliation from ShinyHunters.</p>
+
+<figure class="hero"><img src="/threat-desk/assets/media/161/large.webp" srcset="/threat-desk/assets/media/161/card.webp 480w, /threat-desk/assets/media/161/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Robotic hand holding a deepfake voice wave with data fragments in the background" decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>A newly formed data extortion group named Inception has been linked to a large-scale campaign targeting single sign-on (SSO) credentials of global brands. The group surfaced on 17 November, claiming seven victims on its extortion site, including AMD, PepsiCo, Cigna Healthcare, AutoZone, and Lucid Motors, though none have publicly confirmed a breach. ReversingLabs says the gang has been operating since late October, identifying 21 domains used for SSO phishing and 41 domains believed to be part of the campaign infrastructure.</p><p>The campaign relies on phone-based social engineering rather than email phishing, with callers posing as support staff to pressure employees into resetting passwords via fake sign-in pages. These pages, often mimicking Okta or NetIQ/OpenText Access Manager, capture credentials before seeking additional multifactor authentication factors. ReversingLabs noted the lure sites are web-only and use legal-themed lookalike domains, bypassing email filters entirely.</p><p>Okta linked the operators to threat cluster O-UNC-053, previously associated with the ShinyHunters extortion group. Okta assessed that the cluster &quot;very likely changed their brand affiliation&quot; after law enforcement disrupted ShinyHunters in September. Inception disputes this link, claiming to operate independently, but Okta noted consistent infrastructure and tactics between the two entities. Neither Okta nor ReversingLabs could validate whether the data published by Inception is authentic.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Organisations using Okta or NetIQ/OpenText Access Manager for single sign-on</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Enforce phishing-resistant authentication, including FIDO2 security keys and passkeys.</li><li>Strengthen help desk identity verification procedures before resetting passwords or MFA.</li><li>Review DNS, proxy, and identity provider logs dating back to 21 October 2026 for suspicious activity.</li><li>Limit sensitive applications to managed devices.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/" rel="noopener">BleepingComputer</a></li><li><a href="https://www.infosecurity-magazine.com/news/inception-extortion-sso-vishing/" rel="noopener">Infosecurity Magazine</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

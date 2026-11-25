@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ox Security: Agent instructions are a new AI attack path · Threat Desk</title>
+<meta name="description" content="Analysis of 542,207 components shows prompt injection and tool poisoning are prevalent in MCP servers and agent skills, bypassing traditional code-based security checks.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Ox Security: Agent instructions are a new AI attack path">
+<meta property="og:description" content="Analysis of 542,207 components shows prompt injection and tool poisoning are prevalent in MCP servers and agent skills, bypassing traditional code-based security checks.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/24/ox-security-agent-instructions-are-a-new-ai-attack-path/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/182/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#d97706" href="/threat-desk/section/threats/">Threat activity</a>
+<time datetime="2026-11-25T11:06:03+00:00">2026-11-25 11:06 UTC</time><span class="sev sev-high">HIGH</span></div>
+<h1>Ox Security: Agent instructions are a new AI attack path</h1>
+<p class="standfirst">Analysis of 542,207 components shows prompt injection and tool poisoning are prevalent in MCP servers and agent skills, bypassing traditional code-based security checks.</p>
+
+<figure class="hero"><img src="/threat-desk/assets/media/182/large.webp" srcset="/threat-desk/assets/media/182/card.webp 480w, /threat-desk/assets/media/182/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="AI instruction lure floating on dark water, watched by a shadowy figure" decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>Ox Security has warned that threat actors are hijacking AI agents through instructions rather than malicious code. The vendor’s &#x27;Plug and Pray&#x27; report, based on an analysis of 542,207 open source components between July and October 2026, found that prompt injection and tool poisoning are more prevalent in certain ecosystems than traditional malware.</p><p>In Model Context Protocol (MCP) servers, 22% of flagged components contained prompt injection or tool poisoning, while 16% executed code at install or import time. In agent skills, the disparity was wider: 26% contained such techniques, compared to 0% with install-time execution. Additionally, 44% of agent skills contained instructions directing agents to exfiltrate data. Neatsun Ziv, CEO of Ox Security, stated that companies are relying on trust signals built for a different era, noting that the issue is who controls the tool and what instructions it gives the agent.</p><p>The report highlights that traditional software trust models are failing. Ox Security found a source owner for only 70% of MCP servers, compared to 93% of npm packages. Furthermore, 67% of MCP servers ran on publisher-controlled infrastructure, making independent code verification impossible, and 82% were malicious in their first observed version, leaving no clean baseline for comparison.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">MCP servers, agent skills, npm, PyPI</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Verify who controls the tools your agents connect to and identify the publisher.</li><li>Confirm whether you can independently verify the code the tools run and if it matches publisher claims.</li><li>Implement monitoring to detect changes to tools running on external infrastructure.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://www.infosecurity-magazine.com/news/researchers-new-ai-attack-path/" rel="noopener">Infosecurity Magazine</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>
