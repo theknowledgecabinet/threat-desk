@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://theknowledgecabinet.github.io/threat-desk/</loc><lastmod>2026-11-26T09:58:48+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/</loc><lastmod>2026-11-26T16:48:22+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/about/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/vulnerabilities/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/advisories/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/threats/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/incidents/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/policy/</loc></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/vulncheck-data-shows-credential-harvesting-becoming-core-exploitation/</loc><lastmod>2026-11-26T16:48:22+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/hackers-abuse-microsoft-and-mozilla-trusted-signing-to-deploy-malware/</loc><lastmod>2026-11-26T16:47:55+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/unit-42-tracks-ai-agents-accelerating-corporate-intrusions/</loc><lastmod>2026-11-26T16:47:38+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/exposed-attacker-servers-reveal-us-hospital-credentials-and-cloud/</loc><lastmod>2026-11-26T16:47:19+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/drupal-installer-gap-exploited-after-incomplete-patch/</loc><lastmod>2026-11-26T16:47:04+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/standard-chartered-s-zodia-custody-reports-data-breach/</loc><lastmod>2026-11-26T16:46:14+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/bithumb-confirms-15-day-breach-of-internal-collaboration-system/</loc><lastmod>2026-11-26T16:45:00+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/malwaremustdie-documents-early-loongarch-linux-rat-in-easyshell-family/</loc><lastmod>2026-11-26T16:44:33+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/polinrider-malware-hidden-in-github-pull-requests-for-three-open/</loc><lastmod>2026-11-26T16:44:16+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/north-korea-linked-polinrider-poisons-7-600-github-repos/</loc><lastmod>2026-11-26T16:43:56+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/google-mandates-mcp-or-cli-for-workspace-ai-agents-from-february-2027/</loc><lastmod>2026-11-26T16:43:42+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/kaspersky-detects-keenadu-malware-on-over-220-000-android-devices/</loc><lastmod>2026-11-26T16:43:25+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/fifa-confirms-cyberattack-exposed-limited-personal-and-business-data/</loc><lastmod>2026-11-26T16:41:31+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration/</loc><lastmod>2026-11-26T16:41:09+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/crowdstrike-to-acquire-zscaler-in-43-9bn-all-stock-deal/</loc><lastmod>2026-11-26T16:40:48+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/signal-blocks-os-ai-agents-from-reading-chats/</loc><lastmod>2026-11-26T09:58:48+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/police-disrupt-57-illegal-streaming-services-in-11-country-operation/</loc><lastmod>2026-11-26T09:58:33+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/26/shinyhunters-claims-return-via-new-tor-site-after-member-arrests/</loc><lastmod>2026-11-26T09:58:18+00:00</lastmod></url>
