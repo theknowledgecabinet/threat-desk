@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adobe patches critical flaws in Experience Manager and Campaign Classic · Threat Desk</title>
+<meta name="description" content="Adobe released updates on 24 November 2026 to fix critical vulnerabilities in Experience Manager and Campaign Classic that allow code execution and privilege escalation.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Adobe patches critical flaws in Experience Manager and Campaign Classic">
+<meta property="og:description" content="Adobe released updates on 24 November 2026 to fix critical vulnerabilities in Experience Manager and Campaign Classic that allow code execution and privilege escalation.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/26/adobe-patches-critical-flaws-in-experience-manager-and-campaign/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/247/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-26T09:51:56+00:00">2026-11-26 09:51 UTC</time><span class="sev sev-critical">CRITICAL</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>Adobe patches critical flaws in Experience Manager and Campaign Classic</h1>
+<p class="standfirst">Adobe released updates on 24 November 2026 to fix critical vulnerabilities in Experience Manager and Campaign Classic that allow code execution and privilege escalation.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123266" rel="noopener">CVE-2026-123266</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-132877" rel="noopener">CVE-2026-132877</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123253" rel="noopener">CVE-2026-123253</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123256" rel="noopener">CVE-2026-123256</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-125676" rel="noopener">CVE-2026-125676</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-125717" rel="noopener">CVE-2026-125717</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123721" rel="noopener">CVE-2026-123721</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-125716" rel="noopener">CVE-2026-125716</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-125718" rel="noopener">CVE-2026-125718</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-125723" rel="noopener">CVE-2026-125723</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/247/large.webp" srcset="/threat-desk/assets/media/247/card.webp 480w, /threat-desk/assets/media/247/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fact card: CVE-2026-123253, CVE-2026-123256, CVE-2026-123266" decoding="async"><figcaption>Fact card drawn from the NVD and CISA records</figcaption></figure>
+<div class="body"><p>Adobe published security bulletins APSB26-104 and APSB26-194 on 24 November 2026, addressing critical vulnerabilities in Adobe Experience Manager and Adobe Campaign Classic. The updates fix flaws with CVSS 3.1 scores of up to 9.9, including code injection and SQL injection issues that could allow attackers to execute malicious code or gain unauthorized access. Adobe stated it was not aware of any attacks using these flaws at the time of publication, and CISA does not list them as known exploited.</p><p>For Experience Manager, the critical code injection vulnerabilities CVE-2026-123266 and CVE-2026-132877 allow a low-privileged attacker to execute arbitrary code without user interaction. The affected versions include Experience Manager Cloud Service 2026.10.29251 and earlier, Experience Manager 6.5 Service Pack 26 and earlier, and Experience Manager 6.5 LTS Service Pack 3 and earlier. Adobe provides cumulative hotfixes for specific service packs and a fixed cloud release, 2026.11.29643.</p><p>The Campaign Classic bulletin covers 12 critical flaws in on-premises deployments on Windows and Linux. These include code injection, SQL injection, and authorisation flaws. Organisations running Campaign Classic 7.4.4 build 9403 or earlier must move to build 9404, while those on 7.4.5 build 9420 or earlier should move to build 9421. Administrators are advised to verify the specific build number, as patched and affected servers may report the same version number.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Adobe Experience Manager Cloud Service 2026.10.29251 and earlier; Experience Manager 6.5 Service Pack 26 and earlier; Experience Manager 6.5 LTS Service Pack 3 and earlier; Campaign Classic 7.4.4 build 9403 or earlier; Campaign Classic 7.4.5 build 9420 or earlier</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Apply the relevant Adobe Experience Manager hotfix or update to cloud release 2026.11.29643.</li><li>Update Adobe Campaign Classic to build 9404 (for 7.4.4) or build 9421 (for 7.4.5).</li><li>Verify the specific build number on each server to confirm the patch is installed, as version numbers alone may be ambiguous.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cybersecuritynews.com/critical-adobe-vulnerabilities/" rel="noopener">Cyber Security News</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123253" rel="noopener">Official record for CVE-2026-123253 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123256" rel="noopener">Official record for CVE-2026-123256 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123266" rel="noopener">Official record for CVE-2026-123266 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123721" rel="noopener">Official record for CVE-2026-123721 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>
