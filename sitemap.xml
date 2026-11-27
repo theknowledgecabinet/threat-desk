@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://theknowledgecabinet.github.io/threat-desk/</loc><lastmod>2026-11-27T09:18:49+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/</loc><lastmod>2026-11-27T16:45:54+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/about/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/vulnerabilities/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/advisories/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/threats/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/incidents/</loc></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/section/policy/</loc></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/california-privacy-protection-agency-director-tom-kemp-to-depart/</loc><lastmod>2026-11-27T16:45:54+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/anthropic-claude-agents-escape-sandboxes-in-up-to-32-of-tests/</loc><lastmod>2026-11-27T16:45:39+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/ex-openai-employee-granted-1m-bail-in-bugging-case/</loc><lastmod>2026-11-27T16:45:23+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/florida-data-recovery-co-founder-charged-with-wire-fraud/</loc><lastmod>2026-11-27T16:45:04+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/threatsday-10m-nginx-services-at-risk-250-malicious-extensions/</loc><lastmod>2026-11-27T16:44:26+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/redops-campaign-breaches-thai-and-philippine-government-networks/</loc><lastmod>2026-11-27T16:44:02+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/ransomware-crew-tests-rust-malware-against-microsoft-defender/</loc><lastmod>2026-11-27T16:43:46+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/threatbook-shuts-down-open-source-cyberstrikeai-framework/</loc><lastmod>2026-11-27T16:43:31+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/microsoft-releases-emergency-hotpatch-for-windows-server-2025-crashes/</loc><lastmod>2026-11-27T16:43:16+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/tor-browser-flaw-exposes-ip-via-single-click-on-malicious-site/</loc><lastmod>2026-11-27T16:43:15+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/q-dir-and-desktopok-downloads-trojanised-to-spread-malware/</loc><lastmod>2026-11-27T16:42:56+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/drupal-warns-of-new-site-takeover-flaw-exploited-in-attacks/</loc><lastmod>2026-11-27T16:41:18+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/microsoft-drops-wsus-role-in-windows-server-2028/</loc><lastmod>2026-11-27T16:40:26+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/korean-engineering-association-breach-leaks-210-000-member-records/</loc><lastmod>2026-11-27T16:39:58+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/barclays-us-arm-confirms-credit-card-data-breach/</loc><lastmod>2026-11-27T16:39:03+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/sap-confirms-cyber-incident-amid-reports-of-source-code-breach/</loc><lastmod>2026-11-27T16:38:48+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/japan-education-ministry-discloses-procurement-system-breach/</loc><lastmod>2026-11-27T16:38:29+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/slovenian-meat-plant-freezer-hacked-set-to-100-c/</loc><lastmod>2026-11-27T16:36:49+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/afp-takes-content-platform-offline-after-cyberattack/</loc><lastmod>2026-11-27T16:36:31+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/nfs2root-flaw-allows-remote-root-access-on-linux-nfs-servers/</loc><lastmod>2026-11-27T16:36:31+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/dwp-takes-online-services-offline-following-cyber-incident/</loc><lastmod>2026-11-27T16:35:42+00:00</lastmod></url>
+<url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/us-air-force-pauses-cloud-one-migration-after-breach/</loc><lastmod>2026-11-27T16:35:27+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/uk-cyber-security-and-resilience-bill-faces-commons-scrutiny/</loc><lastmod>2026-11-27T09:18:49+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/microsoft-fixes-blank-dialog-blocking-microsoft-365-office-apps/</loc><lastmod>2026-11-27T09:18:26+00:00</lastmod></url>
 <url><loc>https://theknowledgecabinet.github.io/threat-desk/2026/11/27/fake-minecraft-mod-farmutils-loader-jar-steals-session-tokens/</loc><lastmod>2026-11-27T09:17:25+00:00</lastmod></url>

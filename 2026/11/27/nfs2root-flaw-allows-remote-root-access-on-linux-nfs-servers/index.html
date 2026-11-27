@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFS2ROOT flaw allows remote root access on Linux NFS servers · Threat Desk</title>
+<meta name="description" content="A critical heap overflow in the Linux kernel&#x27;s NFS server, present since 2014, enables unauthenticated remote root compromise if port 2049 is exposed.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="NFS2ROOT flaw allows remote root access on Linux NFS servers">
+<meta property="og:description" content="A critical heap overflow in the Linux kernel&#x27;s NFS server, present since 2014, enables unauthenticated remote root compromise if port 2049 is exposed.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/27/nfs2root-flaw-allows-remote-root-access-on-linux-nfs-servers/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/345/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-27T16:36:31+00:00">2026-11-27 16:36 UTC</time><span class="sev sev-critical">CRITICAL</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>NFS2ROOT flaw allows remote root access on Linux NFS servers</h1>
+<p class="standfirst">A critical heap overflow in the Linux kernel&#x27;s NFS server, present since 2014, enables unauthenticated remote root compromise if port 2049 is exposed.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-99362" rel="noopener">CVE-2026-99362</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/345/large.webp" srcset="/threat-desk/assets/media/345/card.webp 480w, /threat-desk/assets/media/345/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fact card: CVE-2026-99362" decoding="async"><figcaption>Fact card drawn from the NVD and CISA records</figcaption></figure>
+<div class="body"><p>OpenSec Intelligence has disclosed CVE-2026-99362, a critical vulnerability in the Linux kernel&#x27;s Network File System (NFS) server component, nfsd. The flaw, dubbed NFS2ROOT, stems from a heap buffer overflow that occurs when the server processes SEQUENCE replies in NFSv4.1 or NFSv4.2 sessions. An attacker with network access to TCP port 2049 can exploit this to corrupt kernel memory, bypass KASLR, and execute arbitrary commands with root privileges without requiring local access or user interaction.</p><p>The vulnerability affects Linux kernel versions dating back to 3.16, released in March 2014. Jérémy Jean of France’s national cybersecurity agency, ANSSI, submitted an upstream fix in August 2026, which OpenSec independently verified with a working exploit. While OpenSec has kept the exploit private, the company demonstrated that remote root access is possible in tested setups. There are currently no reports of in-the-wild exploitation, and CISA has not listed the vulnerability in its Known Exploited Vulnerabilities Catalog.</p><p>To mitigate the risk, administrators should immediately apply kernel updates from their distribution vendors. Fixed versions include Linux 5.10.275, 5.15.226, 6.1.193, 6.6.163, 6.12.117, 6.18.61, 7.3.2, and 7.4-rc1. For systems that cannot be patched immediately, restricting access to TCP port 2049 to trusted clients or disabling NFSv4.1 and NFSv4.2 where possible are recommended temporary measures.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Linux kernel versions prior to 5.10.275, 5.15.226, 6.1.193, 6.6.163, 6.12.117, 6.18.61, 7.3.2, and 7.4-rc1 with NFSv4.1 or NFSv4.2 enabled and TCP port 2049 reachable.</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Apply the latest kernel security updates from your Linux distribution vendor and reboot the system.</li><li>Restrict access to TCP port 2049 to trusted clients or networks if patching is delayed.</li><li>Disable NFSv4.1 and NFSv4.2 if workloads allow, after checking client requirements.</li><li>Monitor for kernel warnings involving nfsd4_check_resp_size and unexpected shells started by kernel workers.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cybersecuritynews.com/nfs2root-linux-vulnerability/" rel="noopener">Cyber Security News</a></li><li><a href="https://www.bleepingcomputer.com/news/security/new-nfs2root-linux-flaw-can-let-attackers-gain-root-privileges/" rel="noopener">BleepingComputer</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-99362" rel="noopener">Official record for CVE-2026-99362 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>
