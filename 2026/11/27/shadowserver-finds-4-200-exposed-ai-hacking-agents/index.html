@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadowserver finds 4,200 exposed AI hacking agents · Threat Desk</title>
+<meta name="description" content="The Shadowserver Foundation identified 4,200 internet-exposed instances of AI attack frameworks, with ARTEX accounting for roughly 70% of the observed deployments.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Shadowserver finds 4,200 exposed AI hacking agents">
+<meta property="og:description" content="The Shadowserver Foundation identified 4,200 internet-exposed instances of AI attack frameworks, with ARTEX accounting for roughly 70% of the observed deployments.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/27/shadowserver-finds-4-200-exposed-ai-hacking-agents/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/320/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#d97706" href="/threat-desk/section/threats/">Threat activity</a>
+<time datetime="2026-11-27T09:14:53+00:00">2026-11-27 09:14 UTC</time><span class="sev sev-critical">CRITICAL</span><span class="chip chip-bad">EXPLOITED</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>Shadowserver finds 4,200 exposed AI hacking agents</h1>
+<p class="standfirst">The Shadowserver Foundation identified 4,200 internet-exposed instances of AI attack frameworks, with ARTEX accounting for roughly 70% of the observed deployments.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2023-38646" rel="noopener">CVE-2023-38646</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/320/large.webp" srcset="/threat-desk/assets/media/320/card.webp 480w, /threat-desk/assets/media/320/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Exposed security cameras with a faint red glow outside an office building." decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>Shadowserver’s 25 November 2026 report documented 4,200 internet-exposed instances of AI hacking frameworks, an increase from just under 3,700 the previous day. The organisation recorded more than 10,000 events from over 80 IP addresses between 9 and 23 November, noting that these figures measure attempted activity against honeypots rather than confirmed breaches. ARTEX and its derivative AntiFox comprised about three-quarters of observed instances on 22 November, while a jump in PentestCode deployments drove the subsequent increase.</p><p>Nearly nine in ten attacking IP addresses were fingerprinted as ARTEX Gateway. Activity was concentrated in the United States and Hong Kong, likely reflecting server hosting locations rather than operator bases. About six in ten source addresses attempted to relay traffic, while direct requests probed VPN gateways, web applications, and developer tools such as Jenkins. Approximately one in ten source addresses sent exploit or injection attempts, most frequently targeting the Metabase vulnerability CVE-2023-38646.</p><p>The FBI’s 13 November advisory stated that some ARTEX-assisted intrusions moved from initial targeting to privileged access in under three hours. Shadowserver advises security teams to check its Device Identification report for the &#x27;ai-attack-framework&#x27; label. If a deployment is authorised, access should be limited to trusted addresses or a VPN with strong authentication; if unverified, the system should be isolated and investigated for misuse.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Metabase open source before 0.46.6.1 and Metabase Enterprise before 1.46.6.1</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Check Shadowserver’s Device Identification report for the &#x27;ai-attack-framework&#x27; label to identify exposed instances.</li><li>Limit access to authorised AI attack frameworks to trusted addresses or a VPN and enforce strong authentication.</li><li>Isolate and investigate any AI framework deployments that cannot be verified as authorised.</li><li>Rate-limit repeated probes and ensure alerts are handled outside business hours.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cybersecuritynews.com/4000-servers-running-ai-hacking-agents-are-exposed/" rel="noopener">Cyber Security News</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-38646" rel="noopener">Official record for CVE-2023-38646 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

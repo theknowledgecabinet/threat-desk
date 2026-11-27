@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tampered Q-Dir and DesktopOK installers deploy Python RAT · Threat Desk</title>
+<meta name="description" content="AhnLab researchers identified malicious installers for two Windows utilities that launch the genuine application while downloading a remote access trojan, compromising trusted software supply chains.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Tampered Q-Dir and DesktopOK installers deploy Python RAT">
+<meta property="og:description" content="AhnLab researchers identified malicious installers for two Windows utilities that launch the genuine application while downloading a remote access trojan, compromising trusted software supply chains.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/27/tampered-q-dir-and-desktopok-installers-deploy-python-rat/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/309/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#d97706" href="/threat-desk/section/threats/">Threat activity</a>
+<time datetime="2026-11-27T09:10:29+00:00">2026-11-27 09:10 UTC</time><span class="sev sev-high">HIGH</span><span class="chip chip-bad">EXPLOITED</span></div>
+<h1>Tampered Q-Dir and DesktopOK installers deploy Python RAT</h1>
+<p class="standfirst">AhnLab researchers identified malicious installers for two Windows utilities that launch the genuine application while downloading a remote access trojan, compromising trusted software supply chains.</p>
+
+<figure class="hero"><img src="/threat-desk/assets/media/309/large.webp" srcset="/threat-desk/assets/media/309/card.webp 480w, /threat-desk/assets/media/309/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fishing net of Python code catches legitimate software installers in a dark digital ocean." decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>Researchers from AhnLab Security Intelligence Center (ASEC) published findings on 26 November 2026, detailing tampered installers for Q-Dir and DesktopOK distributed via the SoftwareOK platform. The malicious installers launch the legitimate applications, which retain valid digital signatures, while silently downloading a Python-based remote access trojan (RAT) from an external server. This supply chain attack allows operators to execute shell commands, transfer files, and capture screenshots on infected systems.</p><p>The malware includes its own Python runtime, ensuring execution even if Python is not installed, and registers a Windows scheduled task for persistence. It also checks running processes against a list of 1,206 security product names to detect defensive tools. ASEC noted that the confirmed versions may not cover all exposed users and did not attribute the campaign to a specific group, though Chinese-language comments were found in the code.</p><p>Users are advised to verify SHA-256 hashes against official download pages before installation. A mismatch indicates a tampered file, even if the embedded executable is signed. Reinstalling the utility alone does not remove the trojan, which operates independently via scheduled tasks and specific file paths.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Q-Dir versions 12.85.0.0, 12.84.0.0, and 12.83.0.0; DesktopOK versions 12.85.0.0 and 12.82.0.0</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Uninstall the affected utility and reinstall the latest verified release from the official source.</li><li>Compare the SHA-256 hash of the new installer with the value published on the official download page.</li><li>Check for the scheduled task &#x27;\UPnp\MicrosoftEdge_dcntel&#x27; and files in &#x27;C:\ProgramData\Microsoft\DeviceSync\b2&#x27; or &#x27;C:\ProgramData\DeviceSync\b2&#x27;.</li><li>Isolate infected machines from the network and investigate for additional malware or data exfiltration.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cybersecuritynews.com/hackers-turn-trusted-windows-software/" rel="noopener">Cyber Security News</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

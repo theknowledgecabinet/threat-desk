@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft 365 update fixes blank window blocking Office apps · Threat Desk</title>
+<meta name="description" content="A startup bug in Microsoft 365 displayed a blank white dialog box that prevented users from accessing Word, Excel, and Outlook, now resolved in a specific build.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Microsoft 365 update fixes blank window blocking Office apps">
+<meta property="og:description" content="A startup bug in Microsoft 365 displayed a blank white dialog box that prevented users from accessing Word, Excel, and Outlook, now resolved in a specific build.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/27/microsoft-365-update-fixes-blank-window-blocking-office-apps/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/322/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#7c3aed" href="/threat-desk/section/incidents/">Incidents and breaches</a>
+<time datetime="2026-11-27T09:15:24+00:00">2026-11-27 09:15 UTC</time><span class="sev sev-low">LOW</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>Microsoft 365 update fixes blank window blocking Office apps</h1>
+<p class="standfirst">A startup bug in Microsoft 365 displayed a blank white dialog box that prevented users from accessing Word, Excel, and Outlook, now resolved in a specific build.</p>
+
+<figure class="hero"><img src="/threat-desk/assets/media/322/large.webp" srcset="/threat-desk/assets/media/322/card.webp 480w, /threat-desk/assets/media/322/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="" decoding="async"><figcaption></figcaption></figure>
+<div class="body"><p>Microsoft has released a fix for a Microsoft 365 startup issue that caused a blank white window to appear when opening Word, Excel, or Outlook. According to a support notice dated 23 November 2026, the issue affected users who could not dismiss the dialog box, rendering the underlying application unusable. The notice identifies Version 2611, Build 16.0.20625.20142, as the release that resolves the problem.</p><p>The company did not specify the cause of the dialog, which earlier builds were affected, or the number of users impacted. Microsoft clarified that this was a desktop startup problem, distinct from the separate Microsoft 365 outage on 12–13 November 2026, which involved Exchange Online mailbox access issues. The support notice also lists PowerPoint, Access, and OneNote for Microsoft 365 as affected applications.</p><p>For users unable to reach the update menu due to the blank window, Microsoft advises using the Command Prompt as an administrator to force the update. The recommended command is `&quot;%programfiles%\Common Files\Microsoft Shared\ClickToRun\officec2rclient.exe&quot; /update user updatetoversion=16.0.20625.20142`. After running the command, users should restart the application and verify the build number under File &gt; Account.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Microsoft 365 (Word, Excel, Outlook, PowerPoint, Access, OneNote); fixed in Version 2611, Build 16.0.20625.20142</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Update to Version 2611, Build 16.0.20625.20142 via File &gt; Account &gt; Update Options &gt; Update Now.</li><li>If the update menu is inaccessible, run the Click-to-Run updater command in an elevated Command Prompt.</li><li>Verify the installed build number under File &gt; Account after the update completes.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cybersecuritynews.com/microsoft-365-white-screen-bug/" rel="noopener">Cyber Security News</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

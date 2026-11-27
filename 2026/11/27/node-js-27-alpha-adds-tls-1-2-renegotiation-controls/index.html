@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Node.js 27 alpha adds TLS 1.2 renegotiation controls · Threat Desk</title>
+<meta name="description" content="The Node.js project released version 27.0.0-alpha.0.2.0 on 26 November 2026, introducing deprecation warnings for TLS 1.2 renegotiation and fixes for HTTP connection reuse flaws.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Node.js 27 alpha adds TLS 1.2 renegotiation controls">
+<meta property="og:description" content="The Node.js project released version 27.0.0-alpha.0.2.0 on 26 November 2026, introducing deprecation warnings for TLS 1.2 renegotiation and fixes for HTTP connection reuse flaws.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/27/node-js-27-alpha-adds-tls-1-2-renegotiation-controls/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/313/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-27T09:11:51+00:00">2026-11-27 09:11 UTC</time><span class="sev sev-high">HIGH</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>Node.js 27 alpha adds TLS 1.2 renegotiation controls</h1>
+<p class="standfirst">The Node.js project released version 27.0.0-alpha.0.2.0 on 26 November 2026, introducing deprecation warnings for TLS 1.2 renegotiation and fixes for HTTP connection reuse flaws.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-105481" rel="noopener">CVE-2026-105481</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123872" rel="noopener">CVE-2026-123872</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/313/large.webp" srcset="/threat-desk/assets/media/313/card.webp 480w, /threat-desk/assets/media/313/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fact card: CVE-2026-105481, CVE-2026-123872" decoding="async"><figcaption>Fact card drawn from the NVD and CISA records</figcaption></figure>
+<div class="body"><p>The alpha release addresses CVE-2026-105481, a flaw in the HTTP client that could accept data arriving before a request was sent as the response to that request. This issue, rated CVSS 6.5, affects Node.js 22.x, 24.x, and 26.x, and is described as an incomplete fix of CVE-2026-48931. The update also stops the HTTP agent from reusing expired idle sockets and enforces maxSessionMemory limits for HTTP/2 client requests.</p><p>The release marks TLS 1.2 renegotiation as deprecated under DEP0213, though it remains enabled by default. This change follows CVE-2026-123872, a high-severity (CVSS 8.1) client certificate authentication bypass that allows clients to change the servername during renegotiation to reach unauthorised endpoints. The vulnerability affects Node.js 22.x, 24.x, and 26.x. Neither CVE is listed by CISA as known exploited.</p><p>Developers can disable renegotiation immediately by setting allowRenegotiation: false in tls.createServer() or tls.connect(). The project recommends requesting client certificates during the first handshake using requestCert rather than relying on renegotiation. For production environments, the November security advisory lists v22.23.5, v24.22.3, and v26.13.1 as the patched releases for supported branches.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Node.js 22.x, 24.x, 26.x</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Update to patched releases v22.23.5, v24.22.3, or v26.13.1 for production systems.</li><li>Set allowRenegotiation: false in TLS server or client configurations to disable TLS 1.2 renegotiation.</li><li>Use requestCert during the initial handshake instead of relying on renegotiation for client certificates.</li><li>Run the Node.js 27 alpha in staging with --pending-deprecation to identify services dependent on TLS 1.2 renegotiation.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cybersecuritynews.com/node-js-27-alpha/" rel="noopener">Cyber Security News</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-105481" rel="noopener">Official record for CVE-2026-105481 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123872" rel="noopener">Official record for CVE-2026-123872 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

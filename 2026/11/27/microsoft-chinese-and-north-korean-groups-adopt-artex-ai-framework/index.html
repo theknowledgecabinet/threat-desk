@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft: Chinese and North Korean groups adopt ARTEX AI framework · Threat Desk</title>
+<meta name="description" content="Microsoft and the Cloud Security Alliance report that nation-state and criminal groups are using the ARTEX autonomous penetration testing framework to accelerate attack chains and achieve privileged access in under three hours.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Microsoft: Chinese and North Korean groups adopt ARTEX AI framework">
+<meta property="og:description" content="Microsoft and the Cloud Security Alliance report that nation-state and criminal groups are using the ARTEX autonomous penetration testing framework to accelerate attack chains and achieve privileged access in under three hours.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/27/microsoft-chinese-and-north-korean-groups-adopt-artex-ai-framework/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/318/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#d97706" href="/threat-desk/section/threats/">Threat activity</a>
+<time datetime="2026-11-27T09:14:35+00:00">2026-11-27 09:14 UTC</time><span class="sev sev-high">HIGH</span><span class="chip chip-bad">EXPLOITED</span></div>
+<h1>Microsoft: Chinese and North Korean groups adopt ARTEX AI framework</h1>
+<p class="standfirst">Microsoft and the Cloud Security Alliance report that nation-state and criminal groups are using the ARTEX autonomous penetration testing framework to accelerate attack chains and achieve privileged access in under three hours.</p>
+
+<figure class="hero"><img src="/threat-desk/assets/media/318/large.webp" srcset="/threat-desk/assets/media/318/card.webp 480w, /threat-desk/assets/media/318/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="AI-driven attack web with a threat actor controlling it from afar" decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>Microsoft revealed on 25 November that Chinese-nexus actors Salt Typhoon, Crystal Typhoon, Storm-0940 and Storm-3358, along with DPRK-linked actors Onyx Sleet and Pearl Sleet, have integrated the ARTEX AI offensive framework into their toolkits. The groups are using the tool to automate network reconnaissance, credential attacks, and web application exploitation. A concurrent Cloud Security Alliance report described ARTEX and similar Agentic Offensive Frameworks as the &#x27;third wave&#x27; of AI-driven threats, noting they enable threat actors to reach privileged access in under three hours and allow low-resourced criminals to execute complex attack chains at scale.</p><p>ARTEX is an open-source, AI model-driven autonomous penetration testing framework released on GitHub in July 2026. Written in Go with an embedded Next.js web console, it functions as an offensive command-and-control platform that communicates with AI agents and large language models. Microsoft noted that while ARTEX does not introduce new attack techniques, it allows actors to vary network indicators such as source IP addresses or user agent strings to bypass static or signature-based detection. Infrawatch analysis published on 24 November identified more than 130 variants of ARTEX in the wild, with server activity rising sharply in early November following a surge in intrusions in October.</p><p>Microsoft advised defenders to inventory internet-facing assets and prioritise fixes on resources leading to sensitive data or privileged identities. Organisations should block and slow down attacks on web applications and APIs by capping request rates, and map what exposed assets or stolen credentials could reach to enable faster response. Additionally, endpoint protection should be run on every internet-facing server, outbound connections from web servers should be restricted, and conditional access should be applied to every user and workload identity.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">ARTEX AI offensive framework</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Inventory internet-facing assets and prioritise fixes on resources leading to sensitive data or privileged identities.</li><li>Block and slow down attacks on web applications and APIs by capping how many requests one client can send in a short time.</li><li>Run endpoint protection on every internet-facing server and keep it in blocking mode.</li><li>Restrict outbound connections from web servers to only the destinations each server needs.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://www.infosecurity-magazine.com/news/chinese-north-korea-artex/" rel="noopener">Infosecurity Magazine</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitcoin Core wallet rebroadcast flaw links addresses to IP · Threat Desk</title>
+<meta name="description" content="A privacy flaw in Bitcoin Core allows observers to link public wallet addresses to node IP addresses for under 35 cents.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Bitcoin Core wallet rebroadcast flaw links addresses to IP">
+<meta property="og:description" content="A privacy flaw in Bitcoin Core allows observers to link public wallet addresses to node IP addresses for under 35 cents.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/27/bitcoin-core-wallet-rebroadcast-flaw-links-addresses-to-ip/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/312/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-27T09:11:36+00:00">2026-11-27 09:11 UTC</time><span class="sev sev-medium">MEDIUM</span><span class="chip chip-bad">NO PATCH YET</span></div>
+<h1>Bitcoin Core wallet rebroadcast flaw links addresses to IP</h1>
+<p class="standfirst">A privacy flaw in Bitcoin Core allows observers to link public wallet addresses to node IP addresses for under 35 cents.</p>
+
+<figure class="hero"><img src="/threat-desk/assets/media/312/large.webp" srcset="/threat-desk/assets/media/312/card.webp 480w, /threat-desk/assets/media/312/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Cracked lens reveals hidden IP address in a network of nodes" decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>Bitcoin Core contributor Abubakar Sadiq Ismail reported on 25 November that a privacy flaw in the wallet’s rebroadcast mechanism allows an observer to identify the IP address of a node tracking a specific Bitcoin address. Ismail’s tests on a private regtest network identified the correct node in 30 out of 30 attempts, with an estimated cost of between 18 and 34 cents per attempt, depending on address type and Bitcoin price.</p><p>The vulnerability stems from the wallet’s automatic rebroadcast of both outgoing and incoming unconfirmed payments. This behaviour reveals that a node is tracking a receiving address, even if the operator did not initiate the transaction. The flaw affects watch-only wallets and third-party applications that load addresses into a Bitcoin Core wallet, such as Sparrow in Bitcoin Core mode and Specter Desktop. It does not allow for the theft of funds or recovery of private keys, but it connects public payment records to network activity.</p><p>Ismail noted that using Tor alongside public internet peers does not shield the public IP from this leak, though a Tor-only setup avoids exposing the IP through rebroadcast. The Bitcoin Core developer discussion points to making automatic rebroadcast of incoming payments opt-in as a longer-term fix, while cautioning that narrower changes may not close all exposure paths.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Bitcoin Core (wallet component), Sparrow (Bitcoin Core mode), Specter Desktop</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Set -walletbroadcast=0 in Bitcoin Core configuration to stop automatic transaction announcements.</li><li>Broadcast outgoing payments separately if disabling walletbroadcast.</li><li>Check if your setup loads a Bitcoin Core wallet, including watch-only instances.</li><li>Consider using a Tor-only setup to avoid exposing public IP via rebroadcast.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cybersecuritynews.com/bitcoin-privacy-flaw/" rel="noopener">Cyber Security News</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

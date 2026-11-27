@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cacti zero-day allows unauthenticated remote code execution · Threat Desk</title>
+<meta name="description" content="A stored SQL injection flaw in Cacti enables attackers to execute commands without login if guest access is enabled, with no patch currently available.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Cacti zero-day allows unauthenticated remote code execution">
+<meta property="og:description" content="A stored SQL injection flaw in Cacti enables attackers to execute commands without login if guest access is enabled, with no patch currently available.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/27/cacti-zero-day-allows-unauthenticated-remote-code-execution/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/306/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-27T09:08:09+00:00">2026-11-27 09:08 UTC</time><span class="chip chip-bad">NO PATCH YET</span></div>
+<h1>Cacti zero-day allows unauthenticated remote code execution</h1>
+<p class="standfirst">A stored SQL injection flaw in Cacti enables attackers to execute commands without login if guest access is enabled, with no patch currently available.</p>
+
+<figure class="hero"><img src="/threat-desk/assets/media/306/large.webp" srcset="/threat-desk/assets/media/306/card.webp 480w, /threat-desk/assets/media/306/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="A missing stone in an arch reveals a dark gap, symbolizing a SQL injection vulnerability." decoding="async"><figcaption>AI-generated illustration</figcaption></figure>
+<div class="body"><p>Security researcher ek0ms savi0r disclosed a zero-day vulnerability in Cacti, an open-source network monitoring tool, on 26 November 2026. The flaw, tracked as 4HTTP2ROOT or 4HTTP2SHELL, is a stored SQL injection that allows unauthenticated attackers to achieve remote code execution in four HTTP requests if anonymous guest access is enabled. A public proof of concept demonstrated command execution on Cacti 1.2.31, though no exploitation in the wild had been reported as of 27 November 2026.</p><p>The vulnerability arises because Cacti does not properly validate settings controlled by guests, allowing database changes that affect polling configurations. While the researcher demonstrated root-level command execution on a test system running as root, commands generally run with the permissions of the affected process. Even without root access, a compromised server could expose credentials used to reach network devices, providing a potential route into other systems.</p><p>No CVE identifier, official severity rating, or confirmed patch is available at this time. Administrators are advised to remove the designated Guest User from authentication settings and deactivate the guest account under Console &gt; Configuration &gt; Users. While disabling guest access blocks the demonstrated attack path, it does not repair the underlying SQL injection, so teams should also restrict web interface access to trusted networks and monitor for unusual processes.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Cacti 1.2.31</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Remove the designated Guest User and deactivate the guest account under Console &gt; Configuration &gt; Users.</li><li>Restrict the web interface to trusted management networks or authenticated VPN users.</li><li>Ensure the application and its polling processes do not run as root unless required.</li><li>Review unexpected changes to user settings and polling configurations for signs of compromise.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cybersecuritynews.com/cacti-4http2root-zero-day/" rel="noopener">Cyber Security News</a></li><li><a href="https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html" rel="noopener">The Hacker News</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>

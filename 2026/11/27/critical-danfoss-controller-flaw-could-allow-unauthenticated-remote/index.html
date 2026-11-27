@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Critical Danfoss controller flaw could allow unauthenticated remote code execution · Threat Desk</title>
+<meta name="description" content="CISA has rated a stack-based buffer overflow in Danfoss AK-SM 8xxA controllers as critical, noting that the vulnerability could permit remote code execution without authentication.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="Critical Danfoss controller flaw could allow unauthenticated remote code execution">
+<meta property="og:description" content="CISA has rated a stack-based buffer overflow in Danfoss AK-SM 8xxA controllers as critical, noting that the vulnerability could permit remote code execution without authentication.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/27/critical-danfoss-controller-flaw-could-allow-unauthenticated-remote/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/319/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-27T09:14:52+00:00">2026-11-27 09:14 UTC</time><span class="sev sev-critical">CRITICAL</span><span class="chip chip-bad">NO PATCH YET</span></div>
+<h1>Critical Danfoss controller flaw could allow unauthenticated remote code execution</h1>
+<p class="standfirst">CISA has rated a stack-based buffer overflow in Danfoss AK-SM 8xxA controllers as critical, noting that the vulnerability could permit remote code execution without authentication.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-129713" rel="noopener">CVE-2026-129713</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/319/large.webp" srcset="/threat-desk/assets/media/319/card.webp 480w, /threat-desk/assets/media/319/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fact card: CVE-2026-129713" decoding="async"><figcaption>Fact card drawn from the NVD and CISA records</figcaption></figure>
+<div class="body"><p>CISA issued advisory ICSA-26-328-03 on 24 November 2026, identifying CVE-2026-129713 in Danfoss AK-SM 8xxA refrigeration controllers running version 5.4.0 or earlier. The agency assigned a CVSS 3.1 score of 9.8, while the National Vulnerability Database lists a CVSS 4.0 base score of 9.3. The flaw is a stack-based buffer overflow in an unauthenticated CGI handler that processes HTTP/S POST requests, potentially leading to memory corruption and arbitrary code execution with web server privileges.</p><p>CISA stated it had received no reports of known public exploitation at the time of publication, though the advisory warns that code execution is possible. The vulnerability was reported by Carlo Meijer of Midnight Blue. Because the affected component does not require a login, strong passwords alone do not mitigate the risk, and a web server restart could interrupt access to the management interface even if cooling equipment continues to run.</p><p>Danfoss said in security advisory DSA-2026-12-01 that it plans to address the flaw in software version 5.5.x and intends to remove the option to disable Strict Mode in a future release. Until the fix is available, the company recommends enabling Strict Mode and using strong, unique passwords for user and administrator accounts.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">Danfoss AK-SM 8xxA refrigeration controllers running version 5.4.0 or earlier</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Enable Strict Mode on affected controllers to apply stronger security settings.</li><li>Restrict access to the web interface by keeping controllers behind firewalls and separating refrigeration control networks from business networks.</li><li>Use a secure VPN or protected network for any required remote technician access.</li><li>Check Danfoss software download pages for release notes confirming when the fix in version 5.5.x is available.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cybersecuritynews.com/danfoss-refrigeration-controller-flaw/" rel="noopener">Cyber Security News</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-129713" rel="noopener">Official record for CVE-2026-129713 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>
