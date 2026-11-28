@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-site="soc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SolarWinds patches 18 Serv-U flaws, including nine critical bugs · Threat Desk</title>
+<meta name="description" content="SolarWinds released Serv-U 2026.4 to fix 18 vulnerabilities, nine of which are critical, with two allowing privilege escalation to root on Linux systems.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" type="image/png" sizes="32x32" href="/threat-desk/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/threat-desk/assets/icon-180.png">
+<link rel="manifest" href="/threat-desk/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Threat Desk" href="/threat-desk/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Threat Desk">
+<meta property="og:title" content="SolarWinds patches 18 Serv-U flaws, including nine critical bugs">
+<meta property="og:description" content="SolarWinds released Serv-U 2026.4 to fix 18 vulnerabilities, nine of which are critical, with two allowing privilege escalation to root on Linux systems.">
+<meta property="og:url" content="https://theknowledgecabinet.github.io/threat-desk/2026/11/28/solarwinds-patches-18-serv-u-flaws-including-nine-critical-bugs/">
+<meta property="og:image" content="https://theknowledgecabinet.github.io/threat-desk/assets/media/384/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/threat-desk/assets/site.css">
+<script src="/threat-desk/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap bar">
+    <a class="brand" href="/threat-desk/"><img src="/threat-desk/assets/icon-192.png" alt="" width="36" height="36"><span>Threat Desk</span></a>
+    <div class="tools"><a class="search-link" href="/threat-desk/search/">Search</a><button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button></div>
+  </div>
+  <nav class="wrap sections" aria-label="Sections"><a href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a><a href="/threat-desk/section/advisories/">Advisories</a><a href="/threat-desk/section/threats/">Threat activity</a><a href="/threat-desk/section/incidents/">Incidents and breaches</a><a href="/threat-desk/section/policy/">Policy and law</a></nav>
+</header>
+<main id="main" class="wrap">
+<article class="story">
+<div class="meta-row"><a class="sec" style="--c:#dc2626" href="/threat-desk/section/vulnerabilities/">Vulnerabilities</a>
+<time datetime="2026-11-28T08:53:01+00:00">2026-11-28 08:53 UTC</time><span class="sev sev-critical">CRITICAL</span><span class="chip chip-ok">PATCH AVAILABLE</span></div>
+<h1>SolarWinds patches 18 Serv-U flaws, including nine critical bugs</h1>
+<p class="standfirst">SolarWinds released Serv-U 2026.4 to fix 18 vulnerabilities, nine of which are critical, with two allowing privilege escalation to root on Linux systems.</p>
+<div class="cves"><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123172" rel="noopener">CVE-2026-123172</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123168" rel="noopener">CVE-2026-123168</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82322" rel="noopener">CVE-2026-82322</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82320" rel="noopener">CVE-2026-82320</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82321" rel="noopener">CVE-2026-82321</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123167" rel="noopener">CVE-2026-123167</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82315" rel="noopener">CVE-2026-82315</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82316" rel="noopener">CVE-2026-82316</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82319" rel="noopener">CVE-2026-82319</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-123166" rel="noopener">CVE-2026-123166</a></div>
+<figure class="hero"><img src="/threat-desk/assets/media/384/large.webp" srcset="/threat-desk/assets/media/384/card.webp 480w, /threat-desk/assets/media/384/large.webp 1200w" sizes="(min-width: 900px) 760px, 100vw" width="1200" height="800" alt="Fact card: CVE-2026-123165, CVE-2026-123166, CVE-2026-123167" decoding="async"><figcaption>Fact card drawn from the NVD and CISA records</figcaption></figure>
+<div class="body"><p>SolarWinds released Serv-U 2026.4 on 24 November 2026, addressing 18 vulnerabilities, including nine critical flaws. The release notes identify CVE-2026-123172 and CVE-2026-123168 as the two flaws that could grant attackers root access on Linux servers, both carrying a CVSS 3.1 base score of 9.1. While the risk is lower on Windows, the update also fixes a high-severity command injection flaw, CVE-2026-123166, that affects only Windows installations.</p><p>Several other critical flaws allow users with existing administrative access to gain elevated privileges. CVE-2026-82322 could let a domain group administrator become a Serv-U server administrator, while CVE-2026-82320 and CVE-2026-82321 could let domain administrators gain system administrator rights. Additionally, CVE-2026-82315 and CVE-2026-82316 involve file access race conditions that could allow privileged users to access or modify protected files, potentially enabling code execution, while CVE-2026-82319 involves a file access race condition and privilege escalation.</p><p>The release notes do not report active exploitation of these newly disclosed flaws. SolarWinds credited the Intigriti Bug Bounty Program for all nine critical reports. The update also includes OpenSSL 3.5 LTS and stops Serv-U from writing multi-factor authentication codes to its logs.</p></div>
+<section class="panel"><h2>Affected</h2><pre class="affected">SolarWinds Serv-U versions prior to 2026.4</pre></section>
+<section class="panel actions"><h2>Actions</h2><ul><li>Upgrade to Serv-U 2026.4, prioritising internet-facing Linux servers.</li><li>Back up the configuration and export the server identifier before installing the update.</li><li>Verify the server reports version 2026.4 and test sign-in and file transfer workflows.</li><li>Review recent administrator changes and unexpected file activity to check for prior compromise.</li></ul></section>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cybersecuritynews.com/critical-solarwinds-serv-u-flaws/" rel="noopener">Cyber Security News</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123165" rel="noopener">Official record for CVE-2026-123165 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123166" rel="noopener">Official record for CVE-2026-123166 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123167" rel="noopener">Official record for CVE-2026-123167 (NVD, CISA)</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-123168" rel="noopener">Official record for CVE-2026-123168 (NVD, CISA)</a></li></ul>
+<p class="checked">Checked against these sources by qwen3.8-flash before publication.</p></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="sister">Plain-English advice for everyone: <a href="https://theknowledgecabinet.github.io/stay-safe-online/">Stay Safe Online</a></p>
+  <p>Threat Desk: Vulnerabilities, advisories and threat activity, twice a day. Written by AI models running at home from official advisories and named news sources, and fact-checked against them by a second model before publication. <a href="/threat-desk/about/">How it works</a> · <a href="/threat-desk/feed.xml">RSS</a> · Part of <a href="https://theknowledgecabinet.github.io/">The Knowledge Cabinet</a></p>
+</footer>
+</body>
+</html>
